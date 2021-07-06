@@ -1,0 +1,127 @@
+.modes {
+	&__content {
+		max-width: 485px;
+		@media screen and(max-width: 1024px) {
+			max-width: 100%;
+		}
+		&-header {
+			padding-top: 60px;
+			max-width: 370px;
+			@media screen and(max-width: 1200px) {
+				padding-top: 20px;
+			}
+			@media screen and(max-width: 1024px) {
+				max-width: 100%;
+			}
+		}
+	}
+	&__title {
+		position: relative;
+		z-index: 3;
+		display: inline-block;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			top: 50%;
+			background-color: $info_color;
+			@media screen and(max-width: 1024px) {
+				display: none;
+			}
+		}
+		&::before {
+			width: 156px;
+			height: 1px;
+			left: calc(100% + 35px);
+			@media screen and(max-width: 1200px) {
+				width: 121px;
+			}
+		}
+		&::after {
+			width: 1px;
+			height: 420px;
+			left: calc(100% + 191px);
+			@media screen and(max-width: 1200px) {
+				height: 310px;
+				left: calc(100% + 155px);
+			}
+		}
+	}
+	&-indicator {
+		margin: 35px 0;
+		display: flex;
+		@media screen and(max-width: 1440px) {
+			margin: 10px 0;
+		}
+		& > * {
+			margin-right: 70px;
+			@media screen and(max-width: 1024px) {
+				margin-right: 20px;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&__block {
+			max-width: 165px;
+			@media screen and(max-width: 1024px) {
+				max-width: 152px;
+			}
+		}
+		&__number {
+			font-family: $title_font;
+			font-size: 60px;
+			line-height: 1.2;
+			font-weight: 400;
+			letter-spacing: -0.07em;
+			color: $accent_color;
+			@media screen and(max-width: 1024px) {
+				font-size: 40px;
+			}
+			span {
+				margin-left: 2px;
+				font-size: 24px;
+			}
+		}
+		&__text {
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: 300;
+			letter-spacing: normal;
+			color: $text_gray;
+		}
+	}
+	&__watch-video {
+		margin-left: auto;
+		@media screen and(max-width: 1024px) {
+			transform: rotate(0);
+			margin-top: 40px;
+		}
+	}
+	&__video {
+		&-container {
+			position: absolute;
+			z-index: -1;
+			top: 30px;
+			right: 0;
+			width: 58%;
+			height: 90vh;
+			@media screen and(max-width: 1024px) {
+				margin-top: 40px;
+				width: 100%;
+				position: relative;
+				z-index: 1;
+				top: 0;
+			}
+		}
+		&-clip,
+		&-cover {
+			@media screen and(max-width: 1024px) {
+				width: 100vw;
+				height: 350px;
+				object-fit: cover;
+			}
+		}
+	}
+}

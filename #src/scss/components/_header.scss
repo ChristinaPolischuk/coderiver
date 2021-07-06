@@ -1,0 +1,43 @@
+.header {
+	padding: 30px 0;
+	position: relative;
+	@media screen and(max-width: 680px) {
+		padding: 10px 0;
+	}
+	&-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&-nav {
+		position: relative;
+		@media screen and(max-width: 680px) {
+			display: none;
+		}
+		&__link {
+			display: inline-block;
+			padding-bottom: 5px;
+			margin-right: 70px;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 14px;
+			letter-spacing: 0.08em;
+			@media screen and(max-width: 1024px) {
+				margin-right: 30px;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&__hover {
+			position: absolute;
+			z-index: 2;
+			left: -10px;
+			bottom: 0;
+			width: 20px;
+			height: 1px;
+			background-color: $accent_color;
+			transition: left 0.5s, width 0.5s;
+		}
+	}
+}

@@ -1,0 +1,146 @@
+.advantages {
+	padding: 100px 0;
+	min-height: 100vh;
+	@media screen and(max-width: 1024px) {
+		padding: 30px 0;
+	}
+	&__inner {
+		display: flex;
+		@media screen and(max-width: 1024px) {
+			flex-wrap: wrap;
+		}
+	}
+	&-video {
+		width: 35%;
+		height: 65vh;
+		max-width: 744px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media screen and(max-width: 1024px) {
+			max-width: 100%;
+			width: 100%;
+			order: 3;
+		}
+		&__clip,
+		&__img {
+			width: 100%;
+		}
+		&__clip {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+		}
+		&__img {
+			@media screen and(max-width: 1024px) {
+				width: 100vw;
+				height: 350px;
+				object-fit: cover;
+			}
+		}
+		&__play {
+			cursor: pointer;
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			background-color: rgba(#fff, 0.8);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: background-color 0.3s;
+			&:hover {
+				background-color: rgba(#fff, 1);
+				.advantages-video__play-img {
+					transform: scale(0.7);
+				}
+			}
+			&-img {
+				position: relative;
+				top: 5px;
+				left: 5px;
+				transform: scale(0.6);
+				transition: transform 0.3s;
+			}
+		}
+	}
+	&-content {
+		margin-left: 100px;
+		@media screen and(max-width: 1440px) {
+			margin-left: 40px;
+		}
+		@media screen and(max-width: 1024px) {
+			margin-bottom: 40px;
+		}
+		@media screen and(max-width: 680px) {
+			margin-left: 0;
+			padding: 0 15px;
+		}
+		&__title {
+			margin: 50px 0 40px;
+			font-size: 20px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.08em;
+			color: $accent_color;
+			@media screen and(max-width: 1440px) {
+				margin: 30px 0;
+			}
+		}
+		&__wrap {
+			display: flex;
+			@media screen and(max-width: 680px) {
+				flex-wrap: wrap;
+			}
+		}
+		&__block {
+			max-width: 270px;
+			@media screen and(max-width: 680px) {
+				max-width: 100%;
+				order: 2;
+			}
+			&.advantages-content__block--product {
+				max-width: 374px;
+				margin-top: 280px;
+				@media screen and(max-width: 1024px) {
+					margin: 0 0 0 40px;
+				}
+				@media screen and(max-width: 680px) {
+					margin: 0 0 40px;
+					order: 1;
+				}
+				@media screen and(max-width: 400px) {
+					max-width: 290px;
+				}
+			}
+		}
+		&__header {
+			max-width: 240px;
+			margin-left: 100px;
+		}
+	}
+	&__bg {
+		max-width: 772px;
+		position: absolute;
+		z-index: -1;
+		top: 250px;
+		right: -150px;
+		color: $section_bg;
+		font-family: $title_font;
+		font-size: 172.6px;
+		line-height: 170px;
+		font-weight: 400;
+		text-align: right;
+		transform: rotate(-90deg);
+		writing-mode: bt-rl;
+		@media screen and(max-width: 1024px) {
+			font-size: 80px;
+			line-height: 80px;
+			max-width: 611px;
+			top: 270px;
+			right: -220px;
+		}
+	}
+}

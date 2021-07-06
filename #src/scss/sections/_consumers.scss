@@ -1,0 +1,83 @@
+.consumers {
+	margin-top: 120px;
+	padding-top: 65px;
+	background-color: $accent_color;
+	color: #fff;
+	@media screen and(max-width: 1200px) {
+		padding-top: 30px;
+	}
+	@media screen and(max-width: 768px) {
+		margin-top: 0;
+	}
+	&__inner {
+		display: flex;
+		justify-content: flex-end;
+		@media screen and(max-width: 768px) {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		}
+	}
+	&__content {
+		width: 22%;
+		margin-right: 30px;
+		padding-left: 15px;
+		@media screen and(max-width: 1440px) {
+			width: 30%;
+		}
+		@media screen and(max-width: 768px) {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+	}
+	&__title {
+		margin-bottom: 35px;
+		font-size: 20px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		@media screen and(max-width: 1200px) {
+			margin-bottom: 20px;
+		}
+	}
+	&__descr {
+		&:not(:last-child) {
+			margin-bottom: 25px;
+			@media screen and(max-width: 1200px) {
+				margin-bottom: 15px;
+				font-size: 16px;
+			}
+		}
+		span {
+			font-weight: 700;
+		}
+	}
+	&__img {
+		width: 100%;
+		@media screen and(max-width: 768px) {
+			height: 350px;
+			object-fit: cover;
+		}
+		&-container {
+			width: 66%;
+			position: relative;
+			top: -125px;
+			@media screen and(max-width: 1200px) {
+				top: -85px;
+			}
+			@media screen and(max-width: 1024px) {
+				width: 70%;
+				top: -65px;
+			}
+			@media screen and(max-width: 768px) {
+				width: 100%;
+				position: static;
+			}
+		}
+	}
+	&__btn {
+		margin: 35px 0;
+		@media screen and(max-width: 1200px) {
+			margin: 15px 0;
+		}
+	}
+}
